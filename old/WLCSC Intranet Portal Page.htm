@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  <meta content="text/html; charset=windows-1252" http-equiv="content-type">
+  <title>WLCSC Intranet Portal Page</title>
+  <style type="text/css">
+body {
+padding-left: 5em;
+color: black;
+background-color: white; 
+background-image:url('Corporation.jpg');
+background-repeat: repeat; }
+
+#page_container {
+position: absolute;
+width: 600px;
+height: 600px;
+}
+
+#nav_container_corp {
+position: absolute;
+top: 63%;
+height: 50%;
+width: 80%; }
+
+#nav_container_schools {
+position: absolute;
+top: 23%;
+width: 80%;
+height: 50%;
+}
+
+#school_nav_col-01 {
+position: absolute;
+top: 10%;
+left: 10px;
+width: 200px;
+height: auto;
+}
+
+#school_nav_col-02 {
+position: absolute;
+top: 10%;
+left: 210px;
+width: 200px;
+height: auto;
+}
+
+#school_nav_col-03 {
+position: absolute;
+top: 10%;
+left: 410px;
+width: 230px;
+height: auto;
+}
+
+#school_nav_col-04 {
+position: absolute;
+top: 10%;
+left: 78%;
+width: 25%;
+height: auto;
+}
+
+#logo {
+position: relative;
+top: 10px;
+left: 10px;
+border: none;
+}
+
+h1.col_header{
+color: #575757;
+font-size: 120%;
+}
+
+h1.school_header{
+color: #808080;
+text-transform: uppercase;
+font-size: 140%;
+position: relative;
+top: -5%;
+}
+
+li {
+line-height: 1.5;
+}
+
+a.titlelink {
+color: #0c7bd0;
+text-decoration: underline;
+}
+
+a.titlelink:hover {text-decoration: underline;}
+
+#search_engines {
+text-align: center;
+font-weight: bold;
+}
+  </style>
+<!--[if lt IE 7]>
+<script language="JavaScript">
+function correctPNG() // correctly handle PNG transparency in Win IE 5.5 & 6.
+{
+   var arVersion = navigator.appVersion.split("MSIE")
+   var version = parseFloat(arVersion[1])
+   if ((version >= 5.5) && (document.body.filters)) 
+   {
+      for(var i=0; i<document.images.length; i++)
+      {
+         var img = document.images[i]
+         var imgName = img.src.toUpperCase()
+         if (imgName.substring(imgName.length-3, imgName.length) == "PNG")
+         {
+            var imgID = (img.id) ? "id='" + img.id + "' " : ""
+            var imgClass = (img.className) ? "class='" + img.className + "' " : ""
+            var imgTitle = (img.title) ? "title='" + img.title + "' " : "title='" + img.alt + "' "
+            var imgStyle = "display:inline-block;" + img.style.cssText 
+            if (img.align == "left") imgStyle = "float:left;" + imgStyle
+            if (img.align == "right") imgStyle = "float:right;" + imgStyle
+            if (img.parentElement.href) imgStyle = "cursor:hand;" + imgStyle
+            var strNewHTML = "<span " + imgID + imgClass + imgTitle
+            + " style=\"" + "width:" + img.width + "px; height:" + img.height + "px;" + imgStyle + ";"
+            + "filter:progid:DXImageTransform.Microsoft.AlphaImageLoader"
+            + "(src=\'" + img.src + "\', sizingMethod='scale');\"></span>" 
+            img.outerHTML = strNewHTML
+            i = i-1
+         }
+      }
+   }    
+}
+window.attachEvent("onload", correctPNG);
+</script>
+<![endif]-->
+
+</head>
+<body>
+<div id="page_container">
+<a href="http://reddev/public/"><img id="logo" alt="Banner" src="WLCSC%20Intranet%20Portal%20Page_files/intranetbanner-small.png" height="79" width="471"></a><br><br><div id="search_engines">Search Engines:  <a href="http://www.ask.com/">Ask.com</a>&nbsp;&nbsp;&nbsp;<a href="http://bing.com/">Bing</a>&nbsp;&nbsp;&nbsp;<a href="http://www.google.com/">Google</a>&nbsp;&nbsp;&nbsp;<a href="http://www.wolframalpha.com/">Wolfram Alpha</a>&nbsp;&nbsp;&nbsp;<a href="http://www.yahoo.com/">Yahoo</a></div>
+<br>
+<div id="nav_container_schools"><h1 class="school_header">Schools</h1>
+<div id="school_nav_col-01" style="background-image:url('Cumberland-color.png'); background-repeat: repeat;"><h1 class="col_header"><a class="titlelink" href="http://wl.k12.in.us/cumberland/" title="Cumberland Website">Cumberland</a></h1>
+<ol>
+  <li><a href="http://wlcsc-destiny/common/welcome.jsp?site=100">Destiny</a></li>
+        <li><a href="http://wl.k12.in.us/cumberland/classrooms/our_classrooms.htm">Classrooms</a></li>
+        <li><a href="http://wl.k12.in.us/cumberland/lunch/lunch_menu.htm">Lunch Menu</a></li>
+        <li><a href="http://wl.k12.in.us/cumberland/information/school_information.htm">Information</a></li>
+  <li><a href="http://wl.k12.in.us/cumberland/office/staff.htm">Staff</a></li>
+</ol>
+</div>
+<div id="school_nav_col-02" style="background-image:url('Happyhollow-color.png'); background-repeat: repeat;"><h1 class="col_header"><a class="titlelink" href="http://wl.k12.in.us/hh/" title="Happy Hollow Website">Happy Hollow</a></h1>
+<ol>
+  <li><a href="http://wlcsc-destiny/common/welcome.jsp?site=101">Destiny</a></li>
+  <li><a href="http://wl.k12.in.us/hh/mediacenter/mc.htm">Media Center</a></li>
+  <li><a href="http://wl.k12.in.us/hh/classrooms/classes.htm">Classrooms</a></li>
+</ol>
+</div>
+<div id="school_nav_col-03" style="background-image:url('SeniorHigh-color.png'); background-repeat: repeat;"><h1 class="col_header"><a class="titlelink" href="http://wl.k12.in.us/hs/" title="Jr./Sr. High School Website">Junior/Senior High School</a></h1>
+<ol>
+  <li><a href="http://wlcsc-destiny/common/welcome.jsp?site=102">Destiny</a></li>
+  <li><a href="http://www.wl.k12.in.us/hs/admin/awards.html">Awards and Honors</a></li>
+  <li>Announcements</li>
+  <ul>
+    <li><a href="http://www.wl.k12.in.us/hs/admin/announcements/jh05302013.pdf">JH</a></li>
+	<li><a href="http://www.wl.k12.in.us/hs/admin/announcements/hs05302013.pdf">HS</a></li>
+	<li><a href="http://www.wl.k12.in.us/hs/admin/announcements.html">Archive</a></li>
+  </ul>
+</ol>
+</div>
+</div>
+<div id="nav_container_corp"><h1 class="school_header">Corporation Wide</h1>
+<br>
+<div id="school_nav_col-01" style="background-image:url('Corporation-color.png'); background-repeat: repeat;"><h1 class="col_header">Online Applications</h1>
+<ol>
+  <li><a href="http://citrix/Citrix/MetaFrame/auth/login.aspx">Citrix</a></li>
+  <li>Harmony
+  <ul>
+  <li><a href="http://harmony.wl.k12.in.us/">Jr./Sr. High</a></li>
+  <li><a href="https://harmony.wl.k12.in.us/HHelementary.nsf/weblogin">Happy Hollow</a></li>
+  <li><a href="https://harmony.wl.k12.in.us/ceelementary.nsf/weblogin">Cumberland</a></li>
+  </ul>
+  </li><li><a href="http://moodle.wl.k12.in.us/">Moodle</a></li>
+  <li><a href="https://mail/exchange/">Web Mail</a></li>
+  <li><a href="http://firefight/">Firefight (IT Help Tickets)</a> | <a href="http://reddev/wlworkOrder/maint/workorders/WO_Add.asp?WorkOrderTypeID=2">Building Work Orders</a></li>
+  <li><a href="http://learnoas.ctb.com/ISTEP/">ISTEP Practice Test</a></li>
+</ol>
+</div>
+<div id="school_nav_col-02" style="background-image:url('Corporation-color.png'); background-repeat: repeat;"><h1 class="col_header">Online Resources</h1>
+External
+      <ol>
+        <li><a href="http://www.in.gov/library/inspire/">Inspire</a></li>
+        <li><a href="http://www.worldbookonline.com/">Worldbook</a></li>
+        <li><a href="http://go-passport.grolier.com/">Grolier</a></li>
+		<li><a href="http://www.learn360.com/">Learn 360</a>
+		</li><li><a href="http://www.discoveryeducation.com/">Discovery Education</a>
+      </li></ol>
+Internal
+<ol>
+  <li><a href="http://wl.k12.in.us/">Corporation Website</a></li>
+  <li><a href="http://reddev/Intranet/wiki/pmwiki.php?n=Documentation.VideoTutorials">Video Tutorials</a></li>
+  <li><a href="http://reddev/Intranet/mediawiki">Intranet Wiki</a></li>
+  <li><a href="http://reddev/Intranet/intranet.htm">Old Intranet</a></li>
+  <li><a href="http://reddev/Intranet/wiki/pmwiki.php?n=Documentation.LogicKeyDocumentation">Harmony Support Documents</a></li>
+</ol>
+</div>
+<div id="school_nav_col-03" style="background-image:url('Corporation-color.png'); background-repeat: repeat;"><h1 class="col_header">News</h1>
+<ol>
+  <li><a href="http://wl.k12.in.us/SuptMessage.htm">Message
+from the Superintendent</a></li>
+  <li><a href="http://wl.k12.in.us/co/board/boardagenda.htm">School
+Board Agenda (current)</a></li>
+  <li><a href="http://wl.k12.in.us/co/board/boardminutes.htm">School
+Board Minutes</a></li>
+  <li><a href="http://wl.k12.in.us/co/newsletter.htm">Community
+Newsletters<br>
+    </a></li>
+</ol>
+</div>
+</div>
+</div>
+
+
+</body></html>
+<!--05292013-->

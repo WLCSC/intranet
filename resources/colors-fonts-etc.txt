@@ -1,0 +1,11 @@
+Red banner: #C50303, #7B0000
+Green banner: #336633, #24020
+Blue banner: #0303C5, #00007B
+
+Menu bar: #999B9F, #828487
+
+Back-background: #303030
+Content-background: #4A4A4A
+
+Body font: Helvetica
+Header font: Titillium Text (thin & medium) - available at http://www.fontsquirrel.com/fonts/TitilliumText
