@@ -51,7 +51,7 @@
 									<li><a href="https://apps.wl.k12.in.us/wepict">WePict</a></li>
 								</ul>
 							</li>
-							<li class="dropdown">
+n							<li class="dropdown">
 								<a href="#" class="dropdown=toggle" data-toggle="dropdown">
 									Documents
 									<b class="caret"></b>
@@ -60,6 +60,7 @@
 									<li><a href="http://tlt.its.psu.edu/suggestions/international/accents/codealt.html">Accents and Symbols</a></li>
 									<li><a href="http://elock.wl.k12.in.us/documents/Special%20Characters.pdf">Accents PDF</a></li>
 									<li><a href="http://elock.wl.k12.in.us/documents/U3%20and%20SmartDrive%20Removal.pdf">U3 Smart Drive Info</a></li>
+									<li><a href="http://learnoas.ctb.com/ISTEP/">ISTEP Practice Test</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -71,7 +72,7 @@
 									<li><a href="http://wl.k12.in.us/cumberland/classrooms/our_classrooms.htm">Classrooms</a></li>
 									<li><a href="http://wl.k12.in.us/cumberland/lunch/lunch_menu.htm">Lunch Menu</a></li>
 									<li><a href="https://harmony.wl.k12.in.us/ceelementary.nsf/weblogin">Harmony</a></li>
-									<li><a href="http://wlcsc-destiny/common/welcome.jsp?site=100">Library Catalog</a></li>
+									<li><a href="http://wlcsc-destiny/common/welcome.jsp?site=100">Library Card Catalog</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -83,7 +84,7 @@
 									<li><a href="http://wl.k12.in.us/hh/classrooms/classes.htm">Classrooms</a></li>
 									<li><a href="http://wl.k12.in.us/hh/mediacenter/mc.htm">Media Center</a></li>
 									<li><a href="https://harmony.wl.k12.in.us/HHelementary.nsf/weblogin">Harmony</a></li>
-									<li><a href="http://wlcsc-destiny/common/welcome.jsp?site=101">Library Catalog</a></li>
+									<li><a href="http://wlcsc-destiny/common/welcome.jsp?site=101">Library Card Catalog</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -94,8 +95,19 @@
 								<ul class="dropdown-menu">
 									<li><a href="http://www.wl.k12.in.us/hs/admin/announcements.html">Announcements</a></li>
 									<li><a href="http://elock.wl.k12.in.us/documents/Code%20Handbook%202008-09.pdf">Handbook</a></li>
-									<li><a href="http://harmony.wl.k12.in.us/">Harmony</a></li>
-									<li><a href="http://wlcsc-destiny/common/welcome.jsp?site=102">Library Catalog</a></li>
+									<li><a href="https://harmony.wl.k12.in.us/">Harmony</a></li>
+									<li><a href="http://wlcsc-destiny/common/welcome.jsp?site=102">Library Card Catalog</a></li>
+								</ul>
+							</li>
+							<li class="dropdown">
+								<a href="#" class="dropdown=toggle" data-toggle="dropdown">
+									Faculty & Staff
+									<b class="caret"></b>
+								</a>
+								<ul class="dropdown-menu">
+									<li><a href="http://apps.wl.k12.in.us/firefight/">Firefight</a></li>
+									<li><a href="http://reddev/wlworkOrder/maint/workorders/WO_Add.asp?WorkOrderTypeID=2">Building Work Orders</a></li>
+									<li><a href="https://mail/exchange/">Web Mail</a></li>
 								</ul>
 							</li>
 						</ul>
@@ -266,16 +278,29 @@
 						</div><!--/row-->
 					</section>
 				</div><!--/span-->
-        <div class="span3 sidebar-width nav-scrollspy">
+				<div class="span3 sidebar-width">
 					<div class="well sidebar-nav sidebar-nav-fixed">
-						<ul class="nav nav-list">
-							<li class="nav-header">Sections</li>
-							<li><a href="#reference-material">Reference Material</a></li>
-							<li><a href="#notes">Notes</a></li>
-							<li class="divider" />
-							<li class="nav-header">Links</li>
-							<li>We are going to put the most popular links from the navbar here.</li>
-						</ul>
+						<div class="nav-scrollspy">
+							<ul class="nav nav-list">
+								<li class="nav-header">Sections</li>
+								<li><a href="#reference-material">Reference Material</a></li>
+								<li><a href="#notes">Notes</a></li>
+							</ul>
+						</div>
+						<div>
+							<ul class="nav nav-list">
+								<li class="divider" />
+								<li class="nav-header">Links</li>
+								<li><a href="http://apps.wl.k12.in.us/firefight/">Firefight</a></li>
+								<li><a data-toggle="collapse" data-target="#harmonies">Harmony</a>
+									<ul id="harmonies" class="collapse nav nav-list">
+										<li><a href="https://harmony.wl.k12.in.us/ceelementary.nsf/weblogin">Cumberland</a></li>
+										<li><a href="https://harmony.wl.k12.in.us/HHelementary.nsf/weblogin">Happy Hollow</a></li>
+										<li><a href="https://harmony.wl.k12.in.us/">Jr/Sr High</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
 					</div><!--/.well -->
 				</div><!--/span-->
 			</div><!--/row-->
