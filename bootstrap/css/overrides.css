@@ -43,6 +43,7 @@ body {
 	padding: 9px 0;
 	/* position: fixed; */
 	/* margin-right: 4px; */
+	margin-top: 16px;
 }
 .sidebar-nav-fixed {
     position: fixed;
