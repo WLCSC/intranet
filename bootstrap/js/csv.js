@@ -73,8 +73,13 @@ function PopulateId (idToPopulatify)
 	}
 
 	var fun = CSVToArray (rawString, ",");
-
+	
 	for (var i = 0; i < fun.length - 1; i += 1) {
+		for (var j = 0; j < fun[i].length; j += 1) {
+			if (fun[i][j] == undefined)
+				fun[i][j] = "";
+		}
+
 		insertString += "<div class=\"accordion-group\">";
 
 		insertString += "<div class=\"accordion-heading\">";
@@ -101,9 +106,12 @@ function PopulateId (idToPopulatify)
 		insertString += "<td>";
 		insertString += "<a href=\"" + fun[i][1] + "\">" + fun[i][0] + "</a>";
 		insertString += "</td>";
-		insertString += "<td>" + fun[i][2] + "</td>";
-		insertString += "<td>" + fun[i][3] + "</td>";
-		insertString += "<td>" + fun[i][4] + "</td>";
+		insertString += "<td" + (fun[i][2] == "n/a" ? " class='disabled-cell'>" : ">") + fun[i][2] + "</td>";
+		insertString += "<td" + (fun[i][3] == "n/a" ? " class='disabled-cell'>" : ">") + fun[i][3] + "</td>";
+		insertString += "<td" +
+			((/^(.*)[Nn][Oo](.*)$/.test (fun[i][4])) ? " class='bad'>" :
+			 ((/^(.*)[Nn][Ee][Ee][Dd][Ee][Dd](.*)$/.test (fun[i][4])) ? " class='orangy'>" :
+			  ((/^(.*)[Yy][Ee][Ss](.*)$/.test (fun[i][4])) ? " class='good'>" : ">"))) + fun[i][4] + "</td>";
 		insertString += "<td>" + fun[i][5] + "</td>";
 		insertString += "</tr>";
 		insertString += "</tbody>";
