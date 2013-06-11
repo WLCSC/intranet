@@ -54,3 +54,73 @@ function CSVToArray (strData, strDelimiter)
 	// Return the parsed data.
 	return (arrData);
 }
+
+function PopulateId (idToPopulatify)
+{
+	// the string to contain all of the elements
+	var insertString = "";
+	var rawString;
+	
+	var xhr = new XMLHttpRequest ();
+
+	xhr.open ("get", "table.csv", false);
+	xhr.send (null);
+
+	if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+		rawString = xhr.responseText;
+	} else {
+		alert ("Request was unsuccessful: " + xhr.status);
+	}
+
+	var fun = CSVToArray (rawString, ",");
+
+	for (var i = 0; i < fun.length - 1; i += 1) {
+		insertString += "<div class=\"accordion-group\">";
+
+		insertString += "<div class=\"accordion-heading\">";
+		insertString += "<a class=\"accordion-toggle\" data-toggle=\"collapse\" data-parent=\"theAccordionThing\" href=\"#collapse" + i + "\">" + fun[i][0] + "</a>";
+		insertString += "</div>";
+		
+		insertString += "<div id=\"collapse" + i + "\" class=\"accordion-body collapse\">";
+		insertString += "<div class=\"accordion-inner\">";
+		
+		insertString += "<table class=\"table table-bordered\">";
+		
+		insertString += "<thead>";
+		insertString += "<tr>";
+		insertString += "<td>Site</td>";
+		insertString += "<td>Username</td>";
+		insertString += "<td>Password</td>";
+		insertString += "<td>Home Access?</td>";
+		insertString += "<td>Notes</td>";
+		insertString += "</tr>";
+		insertString += "</thead>";
+		
+		insertString += "<tbody>";
+		insertString += "<tr>";
+		insertString += "<td>";
+		insertString += "<a href=\"" + fun[i][1] + "\">" + fun[i][0] + "</a>";
+		insertString += "</td>";
+		insertString += "<td>" + fun[i][2] + "</td>";
+		insertString += "<td>" + fun[i][3] + "</td>";
+		insertString += "<td>" + fun[i][4] + "</td>";
+		insertString += "<td>" + fun[i][5] + "</td>";
+		insertString += "</tr>";
+		insertString += "</tbody>";
+		
+		insertString += "</table>";
+		insertString += "</div>";
+		insertString += "</div>";
+		insertString += "</div>";
+		insertString += "</div>";
+	}
+	
+	console.log (insertString);
+	
+	$("#" + idToPopulatify).html (insertString);
+	return fun;
+}
+
+$(document).ready (function () {
+	PopulateId ("theAccordionThing");
+});
