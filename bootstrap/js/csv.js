@@ -63,7 +63,7 @@ function PopulateAccordionId (idToPopulatify)
 	
 	var xhr = new XMLHttpRequest ();
 
-	xhr.open ("get", "table.csv", false);
+	xhr.open ("get", "reference_material.csv", false);
 	xhr.send (null);
 
 	if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
@@ -123,12 +123,64 @@ function PopulateAccordionId (idToPopulatify)
 		insertString += "</div>";
 	}
 	
-	console.log (insertString);
-	
 	$("#" + idToPopulatify).html (insertString);
 	return fun;
 }
 
+function PopulateNotesSectionId (idToPopulatify)
+{
+	// the string to contain all of the elements
+	var insertString = "";
+	var rawString;
+	
+	var xhr = new XMLHttpRequest ();
+
+	xhr.open ("get", "notes_section.csv", false);
+	xhr.send (null);
+
+	if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
+		rawString = xhr.responseText;
+	} else {
+		alert ("Request was unsuccessful: " + xhr.status);
+	}
+
+	var fun = CSVToArray (rawString, ",");
+
+	var counter = 0;
+	
+	insertString += "<div class=\"page-header\"><h1>Notes</h1></div>";
+	
+	for (var i = 0; i < fun.length - 1; i += 1) {
+		for (var j = 0 ; j < fun[i].length; j += 1) {
+			if (fun[i][j] == undefined)
+				fun[i][j] = "";
+		}
+
+		if (counter == 0) {
+			insertString += "<div class=\"row-fluid\">";
+		}
+
+		if (counter + parseInt (fun[i][0]) <= 12) {
+			insertString += "<div class=\"span" + fun[i][0] + "\">";
+			insertString += "<h2>" + fun[i][1] + "</h2>";
+			insertString += "<p>" + fun[i][2] + "</p>";
+			if (fun[i][4] != "" && fun[i][3] != "")
+				insertString += "<p><a class=\"btn\" href=\"" + fun[i][4] + "\">" + fun[i][3] + "</a></p>"
+			insertString += "</div>"
+			
+			counter += parseInt (fun[i][0]);
+		}
+
+		if (counter == 12) {
+			insertString += "</div>";
+			counter = 0;
+		}
+	}
+	
+	$("#" + idToPopulatify).html (insertString);
+}
+
 $(document).ready (function () {
 	PopulateAccordionId ("theAccordionThing");
+	PopulateNotesSectionId ("notes");
 });
