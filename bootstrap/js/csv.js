@@ -55,7 +55,7 @@ function CSVToArray (strData, strDelimiter)
 	return (arrData);
 }
 
-function PopulateId (idToPopulatify)
+function PopulateAccordionId (idToPopulatify)
 {
 	// the string to contain all of the elements
 	var insertString = "";
@@ -130,5 +130,5 @@ function PopulateId (idToPopulatify)
 }
 
 $(document).ready (function () {
-	PopulateId ("theAccordionThing");
+	PopulateAccordionId ("theAccordionThing");
 });
