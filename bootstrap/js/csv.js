@@ -60,26 +60,34 @@ function PopulateAccordionId (idToPopulatify)
 	// the string to contain all of the elements
 	var insertString = "";
 	var rawString;
-	
+
+	// new raw request
 	var xhr = new XMLHttpRequest ();
 
+	// set the properties, getting reference_material.csv
 	xhr.open ("get", "reference_material.csv", false);
 	xhr.send (null);
 
+	// if the response status is between 200 and 300 or is 304, good response
 	if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
 		rawString = xhr.responseText;
 	} else {
+		// tell about the error for now
 		alert ("Request was unsuccessful: " + xhr.status);
 	}
 
+	// get the array from the response text
 	var fun = CSVToArray (rawString, ",");
-	
+
+	// increment through each row
 	for (var i = 0; i < fun.length - 1; i += 1) {
+		// check for 'undefined elements, set them to empty strings
 		for (var j = 0; j < fun[i].length; j += 1) {
 			if (fun[i][j] == undefined)
 				fun[i][j] = "";
 		}
 
+		// start adding to the text to be inserted
 		insertString += "<div class=\"accordion-group\">";
 
 		insertString += "<div class=\"accordion-heading\">";
@@ -122,7 +130,8 @@ function PopulateAccordionId (idToPopulatify)
 		insertString += "</div>";
 		insertString += "</div>";
 	}
-	
+
+	// insert the text to the idToPopulatify-id element
 	$("#" + idToPopulatify).html (insertString);
 	return fun;
 }
@@ -133,23 +142,31 @@ function PopulateNotesSectionId (idToPopulatify)
 	var insertString = "";
 	var rawString;
 	
+	// new raw request
 	var xhr = new XMLHttpRequest ();
 
+	// set the properties, getting notes_section.csv
 	xhr.open ("get", "notes_section.csv", false);
 	xhr.send (null);
 
+	// if the response status is between 200 and 300 or is 304, good response
 	if ((xhr.status >= 200 && xhr.status < 300) || xhr.status == 304) {
 		rawString = xhr.responseText;
 	} else {
+		// tell about the error for now
 		alert ("Request was unsuccessful: " + xhr.status);
 	}
 
+	// get the array from the response text
 	var fun = CSVToArray (rawString, ",");
 
+	// counter to count spans
 	var counter = 0;
-	
+
+	// section header
 	insertString += "<div class=\"page-header\"><h1>Notes</h1></div>";
 	
+	// increment through each row
 	for (var i = 0; i < fun.length - 1; i += 1) {
 		for (var j = 0 ; j < fun[i].length; j += 1) {
 			if (fun[i][j] == undefined)
