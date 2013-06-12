@@ -1,6 +1,13 @@
 /* .navbar a.brand { */
 /* 	padding-bottom: 0px; */
 /* } */
+.accordion-group {
+  background: #ffffff;
+}
+body {
+  background-image:url('../img/background.png');
+  
+}
 @media(min-width:979px){
   .row-fluid .span9Sometimes {
     width: 74.35897435897436%;
