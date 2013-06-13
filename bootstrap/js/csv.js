@@ -198,6 +198,6 @@ function PopulateNotesSectionId (idToPopulatify)
 }
 
 $(document).ready (function () {
-	PopulateAccordionId ("theAccordionThing");
-	PopulateNotesSectionId ("notes");
+	PopulateAccordionId ("theAccordionThings");
+	PopulateNotesSectionId ("notess");
 });
