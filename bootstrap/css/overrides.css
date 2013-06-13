@@ -118,3 +118,14 @@ section:last-child {
 .hide {
 	display: none;
 }
+
+.page-header {
+	margin-top: 0px;
+	padding-bottom: 8px;
+	margin-bottom: 16px;
+}
+
+.page-header > h1 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
