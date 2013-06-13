@@ -79,6 +79,9 @@ function PopulateAccordionId (idToPopulatify)
 	// get the array from the response text
 	var fun = CSVToArray (rawString, ",");
 
+	insertString += "<div class=\"page-header\"><h1>Reference Material</h1></div>";
+	insertString += "<div class=\"accordion\">";
+
 	// increment through each row
 	for (var i = 0; i < fun.length - 1; i += 1) {
 		// check for 'undefined elements, set them to empty strings
@@ -86,10 +89,10 @@ function PopulateAccordionId (idToPopulatify)
 			if (fun[i][j] == undefined)
 				fun[i][j] = "";
 		}
-
+	
 		// start adding to the text to be inserted
 		insertString += "<div class=\"accordion-group\">";
-
+		
 		insertString += "<div class=\"accordion-heading\">";
 		insertString += "<a class=\"accordion-toggle\" data-toggle=\"collapse\" data-parent=\"theAccordionThing\" href=\"#collapse" + i + "\">" + fun[i][0] + "</a>";
 		insertString += "</div>";
@@ -128,8 +131,10 @@ function PopulateAccordionId (idToPopulatify)
 		insertString += "</div>";
 		insertString += "</div>";
 		insertString += "</div>";
-		insertString += "</div>";
+		//insertString += "</div>";
 	}
+	
+	insertString += "</div>";
 
 	// insert the text to the idToPopulatify-id element
 	$("#" + idToPopulatify).html (insertString);
@@ -198,6 +203,6 @@ function PopulateNotesSectionId (idToPopulatify)
 }
 
 $(document).ready (function () {
-	PopulateAccordionId ("theAccordionThings");
-	PopulateNotesSectionId ("notess");
+	PopulateAccordionId ("reference_material");
+	PopulateNotesSectionId ("notes");
 });

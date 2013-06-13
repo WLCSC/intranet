@@ -5,6 +5,10 @@
 	background: #ffffff;
 }
 
+.accordion {
+	margin-bottom: 0px;
+}
+
 body {
 	background-image:url('../img/background.png');
 }
@@ -89,6 +93,10 @@ body {
 
 section {
 	margin-bottom: 32px;
+}
+
+section:last-child {
+	margin-bottom: 0px;
 }
 
 .good {
