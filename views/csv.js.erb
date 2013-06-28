@@ -65,7 +65,7 @@ function PopulateAccordionId (idToPopulatify)
 	var xhr = new XMLHttpRequest ();
 
 	// set the properties, getting reference_material.csv
-	xhr.open ("get", "csv/reference_material.csv", false);
+	xhr.open ("get", "<%= url 'reference_material.csv' %>", false);
 	xhr.send (null);
 
 	// if the response status is between 200 and 300 or is 304, good response
@@ -151,7 +151,7 @@ function PopulateNotesSectionId (idToPopulatify)
 	var xhr = new XMLHttpRequest ();
 
 	// set the properties, getting notes_section.csv
-	xhr.open ("get", "csv/notes_section.csv", false);
+	xhr.open ("get", "<%= url 'notes_section.csv' %>", false);
 	xhr.send (null);
 
 	// if the response status is between 200 and 300 or is 304, good response

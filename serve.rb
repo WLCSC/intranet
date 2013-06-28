@@ -5,8 +5,26 @@ require 'rubygems'
 
 # the most basic of servers :D
 
+helpers do
+  def base_url
+    @base_url ||= "#{request.env['rack.url_scheme']}://#{request.env['HTTP_HOST']}"
+  end
+end
+
 get '/' do
-	File.read(File.join('public', 'index.html'))
+	erb :index
+end
+
+get '/csv.js' do
+	erb 'csv.js'.to_sym
+end
+
+get '/notes_section.csv' do
+	File.read(File.join('public', 'csv', 'notes_section.csv'))
+end
+
+get '/reference_material.csv' do
+	File.read(File.join('public', 'csv', 'reference_material.csv'))
 end
 
 not_found do

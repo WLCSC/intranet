@@ -10,14 +10,14 @@
 		<meta name="author" content="">
 
 		<!-- Le styles -->
-		<link href="css/bootstrap.css" rel="stylesheet">
-		<link href="css/bootstrap-responsive.css" rel="stylesheet">
-		<link href="css/overrides.css" rel="stylesheet">
-                <link rel="stylesheet" href="css/font-awesome.min.css">
+		<link href="<%= url 'css/bootstrap.css' %>" rel="stylesheet">
+		<link href="<%= url 'css/bootstrap-responsive.css' %>" rel="stylesheet">
+		<link href="<%= url 'css/overrides.css' %>" rel="stylesheet">
+                <link rel="stylesheet" href="<%= url 'css/font-awesome.min.css' %>">
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
-			<script src="../assets/js/html5shiv.js"></script>
+			<script src="<%= url '../assets/js/html5shiv.js' %>"></script>
 			<![endif]-->
 
 		<!-- Fav and touch icons -->
@@ -174,6 +174,7 @@
 				<p>Created by Christopher Cooper, Sam Mercier &amp; Kristofer Rye, Class of 2016.</p>
 				<p>Maintained by the WLCSC IT Department - <a href="mailto: thompsonb@wl.k12.in.us">Contact Us</a>.</p>
 				<p>Source available on <a href="http://github.com/WLCSC/intranet/">GitHub</a>.</p>
+				<p><%= @base_url %></p>
 				<!-- We need to come up with some cool name or something -->
 				<!--<p>&copy; 2013</p>-->
 			</footer>
@@ -181,9 +182,9 @@
 		<!-- Le javascript
 			 ================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
-		<script src="js/jquery.js"></script>
-		<script src="js/bootstrap.js"></script>
-		<script src="js/overrides.js"></script>
-		<script src="js/csv.js"></script>
+		<script src="<%= url 'js/jquery.js' %>"></script>
+		<script src="<%= url 'js/bootstrap.js' %>"></script>
+		<script src="<%= url 'js/overrides.js' %>"></script>
+		<script src="<%= url 'csv.js' %>"></script>
 	</body>
 </html>
