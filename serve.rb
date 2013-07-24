@@ -11,11 +11,16 @@ helpers do
   end
 end
 
+configure do
+	mime_type :js, "application/javascript"
+end
+
 get '/' do
 	erb :index
 end
 
 get '/csv.js' do
+	content_type :js
 	erb 'csv.js'.to_sym
 end
 
