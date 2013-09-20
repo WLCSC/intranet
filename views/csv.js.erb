@@ -83,7 +83,9 @@ function PopulateAccordionId (idToPopulatify)
 	insertString += "<div class=\"accordion\">";
 
 	// increment through each row
-	for (var i = 0; i < fun.length - 1; i += 1) {
+    for (var i = 0; i < fun.length - 1; i += 1) {
+        l = fun[i].length;
+        if(l > 1) {
 		// check for 'undefined elements, set them to empty strings
 		for (var j = 0; j < fun[i].length; j += 1) {
 			if (fun[i][j] == undefined)
@@ -131,7 +133,8 @@ function PopulateAccordionId (idToPopulatify)
 		insertString += "</div>";
 		insertString += "</div>";
 		insertString += "</div>";
-		//insertString += "</div>";
+        //insertString += "</div>";
+        }
 	}
 	
 	insertString += "</div>";
