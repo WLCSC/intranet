@@ -106,9 +106,11 @@ function PopulateAccordionId (idToPopulatify)
 		
 		insertString += "<thead>";
 		insertString += "<tr>";
-		insertString += "<td>Site</td>";
-		insertString += "<td>Username</td>";
-		insertString += "<td>Password</td>";
+        insertString += "<td>Site</td>";
+        <% if internal? %>
+		    insertString += "<td>Username</td>";
+            insertString += "<td>Password</td>";
+        <% end %>
 		insertString += "<td>Home Access?</td>";
 		insertString += "<td>Notes</td>";
 		insertString += "</tr>";
@@ -118,9 +120,11 @@ function PopulateAccordionId (idToPopulatify)
 		insertString += "<tr>";
 		insertString += "<td>";
 		insertString += "<a href=\"" + fun[i][1] + "\">" + fun[i][0] + "</a>";
-		insertString += "</td>";
+        insertString += "</td>";
+        <% if internal? %>
 		insertString += "<td" + (fun[i][2] == "n/a" ? " class='disabled-cell'>" : ">") + fun[i][2] + "</td>";
-		insertString += "<td" + (fun[i][3] == "n/a" ? " class='disabled-cell'>" : ">") + fun[i][3] + "</td>";
+        insertString += "<td" + (fun[i][3] == "n/a" ? " class='disabled-cell'>" : ">") + fun[i][3] + "</td>";
+        <% end %>
 		insertString += "<td" +
 			((/^(.*)[Nn][Oo](.*)$/.test (fun[i][4])) ? " class='bad'>" :
 			 ((/^(.*)[Nn][Ee][Ee][Dd][Ee][Dd](.*)$/.test (fun[i][4])) ? " class='orangy'>" :
@@ -204,8 +208,57 @@ function PopulateNotesSectionId (idToPopulatify)
 	
 	$("#" + idToPopulatify).html (insertString);
 }
+            var remoteData = null;
+            var remoteDump = null;
+
+            function statusClass(i) {
+                switch(i){
+                    case 1:
+                        return "btn btn-block btn-success";
+                        break;
+                    case 2:
+                        return "btn btn-block btn-warning";
+                        break;
+                    case 3:
+                        return "btn btn-block btn-danger";
+                        break;
+                    default:
+                        return 'btn btn-block btn-info';
+                        break;
+                }
+            }
+
+            function populateApps() {
+                $.getJSON("https://apps.wl.k12.in.us/dashboard/services.json?published=1&callback=?", function(json) {
+                    remoteDump = json;
+                    $('#apps-loading').remove();
+                    $('#web_apps').append('<table class="table table-condensed" id="app-table">');
+                    $.each(json, function(i, svc) {
+                        if(i % 4 == 0 ) {
+                            $('#app-table').append('<tr></tr>');
+                        }
+
+                        $('#app-table tr:last-child').append('<td width="25%"><a class="' + statusClass(svc.status) + '" href="' + svc.address + '">' +  svc.name + '</a></td>')
+
+                    });
+                    $('#web_apps').append('</table>');
+                });
+                $.getJSON("https://apps.wl.k12.in.us/dashboard/services.json?outages=1&callback=?", function(json) {
+                    if(json.length > 0) {
+                        $('#outageBox').append('<li class="divider"></li><li class="nav-header">IT Service Messages</li>');
+                        $.each(json, function(i, service) {
+                            $('#outageBox').append('<li><b><a href="' + service['address'] + '">' + service['name'] + '</a></b> - ' + service['message'] + '</li>');
+                        });
+                        $('#outageBox').append('</ul>');
+                    }
+                });
+            }
+
 
 $(document).ready (function () {
-	PopulateAccordionId ("reference_material");
-	PopulateNotesSectionId ("notes");
+    PopulateAccordionId ("reference_material");
+    <% if internal? %>
+        PopulateNotesSectionId ("notes");
+populateApps();
+<% end %>
 });

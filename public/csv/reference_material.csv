@@ -1,29 +1,19 @@
-"America at War","http://online.factsonfile.com/america-at-war-online.aspx","wlhs479","facts","Login Needed",""
-
-"Awesome Stories","http://www.awesomestories.com/","n/a","n/a","No","<div class='btn-group'><a class='btn btn-mini btn-primary' href='http://www.awesomestories.com/audio-clips'>Audio</a><a class='btn btn-mini btn-success' href='http://www.awesomestories.com/images/'>Images</a><a class='btn btn-mini btn-warning' href='http://www.awesomestories.com/videos'>Videos</a></div>"
-
-"Career Cruising","http://www.careercruising.com/","wljshs","reddevils","Yes, see Mrs. Bentlage for login info",""
-
-"EasyBib","http://www.easybib.com/","n/a","n/a","Yes","Accessible anywhere with an Internet connection."
-
-"Grolier","http://go.grolier.com/","wlaf","home","Yes",""
-
-"Inspire","http://www.inspire.net/","n/a","n/a","Sign up for password online",""
-
-"Issues & Controversies","http://www.2facts.com/Direct2.aspx?ItemID=WE57&ID=98390","wlhs479","facts","Login needed",""
-
-"Oxford Art Online","http://www.oxfordartonline.com/","weslaf","weslaf","<!--GOOD-->Login needed",""
-
-"Oxford Music Online","http://www.oxfordmusiconline.com/","n/a","n/a","n/a",""
-
-"Pop Culture","http://popculture.abc-clio.com/","wljshstudent","wljshstudent","Yes",""
-
-"ProQuest CultureGrams","20-90136REMOTE","bigchalk","Yes, visit <a href='http://www.proquestk12.com/'>proquestk12.com</a>",""
-
-"Testing and Education Reference Center","http://infotrac.galegroup.com/itweb/inspire?id=library&db=terc","n/a","n/a","Yes","Test Prep resource for PSAT, SAT, ACT, and many more."
-
-"The World News Digest","http://www.2facts.com/Direct2.aspx?ItemID=WE56&ID=98390","wlhs479","facts","Yes",""
-
-"World and I School","http://www.worldandischool.com/","WLJSHS","WLJHSHS","Yes",""
-
-"World Book","http://www.worldbookonline.com/","wlcsc","devils","Yes",""
+America at War,http://online.factsonfile.com/america-at-war-online.aspx,wlhs479,facts,Login Needed,
+Awesome Stories,http://www.awesomestories.com/,n/a,n/a,No,<div class='btn-group'><a class='btn btn-mini btn-primary' href='http://www.awesomestories.com/audio-clips'>Audio</a><a class='btn btn-mini btn-success' href='http://www.awesomestories.com/images/'>Images</a><a class='btn btn-mini btn-warning' href='http://www.awesomestories.com/videos'>Videos</a></div>
+Bloom's Literature,http://online.infobaselearning.com/Direct.aspx?aid=98390&pid=WE00,wlhs479,facts,Yes,
+Bloom's Modern Critical Views,http://ebooks.infobaselearning.com,wlhs479,info,Yes,Accessible with password.
+Career Cruising,http://www.careercruising.com/,wljshs,reddevils,Yes,Your username is wlcsc-[harmony login].  Your password is your student ID number.
+EasyBib,http://www.easybib.com/,n/a,n/a,Yes,Accessible anywhere with an Internet connection.
+Grolier,http://go.grolier.com/,wlaf,home,Yes,
+Inspire,http://www.inspire.net/,n/a,n/a,Sign up for password online,
+JSTOR,http://jstor.org,n/a,n/a,Yes,"Before you are allowed to access this from home, you must register <a href='http://jstor.org/token/9MMHjeGIT8Tn5Z7jabbr/wl.k12.in.us'>here</a>"
+Lincoln Library of Sports Champions,http://factsite.com,weslaf,reddevils,Yes,You will need the password for home access.
+Opposing Viewpoints in Context,http://infotrac.galegroup.com/itweb/wla06823?db=OVIC,N/A,wla_log,Yes,Password needed for home access
+Oxford Art Online,http://www.oxfordartonline.com/,weslaf,weslaf,<!--GOOD-->Login needed,
+Oxford Music Online,http://www.oxfordmusiconline.com/,n/a,n/a,n/a,
+ProQuest CultureGrams,http://www.proquestk12.com,20-90136REMOTE,bigchalk,Yes,
+ProQuest Sirs Decades,http://www.proquestk12.com,20-90136REMOTE,bigchalk,Yes,
+Testing and Education Reference Center,http://infotrac.galegroup.com/itweb/inspire?id=library&db=terc,n/a,n/a,Yes,"Test Prep resource for PSAT, SAT, ACT, and many more."
+Today's Science,http://online.infobaselearning.com/Direct.aspx?aid=98390&pid=WE00,wlhs479,facts,Yes,Accessible with password.
+World and I School,http://www.worldandischool.com/,WLJSHS,WLJHSHS,Yes,
+World Book,http://www.worldbookonline.com/,wlcsc,devils,Yes,Accessible anywhere with username & password.

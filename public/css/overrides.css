@@ -17,6 +17,16 @@ body {
 	#sidebar {
 		display: none;
 	}
+    
+    .row-fluid .span9Sometimes {
+		width: 100%;
+		*width: 99.94680851063829%;
+	}
+    
+    body {
+		padding-top: 80px;
+	}
+
 }
 
 @media(min-width:979px){
@@ -24,13 +34,11 @@ body {
 		width: 74.35897435897436%;
 		*width: 74.30578286961266%;
 	}
-}
-
-@media(max-width:979px){
-	.row-fluid .span9Sometimes {
-		width: 100%;
-		*width: 99.94680851063829%;
+    
+    body {
+		padding-top: 60px;
 	}
+
 }
 
 .navbar-inner {
@@ -41,18 +49,6 @@ body {
 a.brand>img {
 	margin-top: -10px;
 	margin-bottom: -10px;
-}
-
-@media(max-width: 979px) {
-	body {
-		padding-top: 80px;
-	}
-}
-
-@media(min-width: 979px) {
-	body {
-		padding-top: 60px;
-	}
 }
 
 body {
@@ -133,4 +129,9 @@ section:last-child {
 a:hover
 {
 	text-decoration: none;
+}
+
+h2 {
+    font-size: 24px;
+    line-height: 28px;
 }

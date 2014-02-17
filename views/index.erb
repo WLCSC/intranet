@@ -7,13 +7,13 @@
 		<title>WLCSC Intranet - Student and Staff Resources</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
-		<meta name="author" content="">
+        <meta name="author" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge" >
 
 		<!-- Le styles -->
 		<link href="<%= url 'css/bootstrap.css' %>" rel="stylesheet">
 		<link href="<%= url 'css/bootstrap-responsive.css' %>" rel="stylesheet">
 		<link href="<%= url 'css/overrides.css' %>" rel="stylesheet">
-        <link rel="stylesheet" href="<%= url 'css/font-awesome.min.css' %>">
 
 		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
 		<!--[if lt IE 9]>
@@ -51,8 +51,6 @@
 									<li><a href="http://citrix/Citrix/MetaFrame/auth/login.aspx">Citrix</a></li>
 									<li><a href="http://moodle.wl.k12.in.us/">Moodle</a></li>
 									<li><a href="http://www.webassign.net/">WebAssign</a></li>
-									<li><a href="https://apps.wl.k12.in.us/senate">Senate</a></li>
-									<li><a href="https://apps.wl.k12.in.us/wepict">WePict</a></li>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -62,8 +60,6 @@
 								</a>
 								<ul class="dropdown-menu">
 									<li><a href="http://tlt.its.psu.edu/suggestions/international/accents/codealt.html">Accents and Symbols</a></li>
-									<li><a href="http://elock.wl.k12.in.us/documents/Special%20Characters.pdf">Accents PDF</a></li>
-									<li><a href="http://elock.wl.k12.in.us/documents/U3%20and%20SmartDrive%20Removal.pdf">U3 Smart Drive Info</a></li>
 									<li><a href="http://learnoas.ctb.com/ISTEP/">ISTEP Practice Test</a></li>
 								</ul>
 							</li>
@@ -73,10 +69,10 @@
 									<b class="caret"></b>
 								</a>
 								<ul class="dropdown-menu">
-									<li><a href="http://ces.wl.k12.in.us/classrooms/class-web-pages">Classrooms</a></li>
+									<li><a href="http://ces.wl.k12.in.us/">Web Site</a></li>
 									<li><a href="http://ces.wl.k12.in.us/info/food-services">Lunch Menu</a></li>
-									<li><a href="https://harmony.wl.k12.in.us/ceelementary.nsf/weblogin">Harmony</a></li>
-									<li><a href="http://wlcsc-destiny/common/welcome.jsp?site=100">Library Card Catalog</a></li>
+                                    <% if internal? %><li><a href="https://harmony.wl.k12.in.us/ceelementary.nsf/weblogin">Harmony</a></li><% end %>
+                                    <% if internal? %><li><a href="http://wlcsc-destiny/common/welcome.jsp?site=100">Library Card Catalog</a></li><% end %>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -87,8 +83,8 @@
 								<ul class="dropdown-menu">
 									<li><a href="http://hh.wl.k12.in.us/classrooms/class-web-pages">Classrooms</a></li>
 									<li><a href="http://hh.wl.k12.in.us/classrooms/media-center">Media Center</a></li>
-									<li><a href="https://harmony.wl.k12.in.us/HHelementary.nsf/weblogin">Harmony</a></li>
-									<li><a href="http://wlcsc-destiny/common/welcome.jsp?site=101">Library Card Catalog</a></li>
+                                    <% if internal? %><li><a href="https://harmony.wl.k12.in.us/HHelementary.nsf/weblogin">Harmony</a></li><% end %>
+                                    <% if internal? %><li><a href="http://wlcsc-destiny/common/welcome.jsp?site=101">Library Card Catalog</a></li><% end %>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -99,8 +95,8 @@
 								<ul class="dropdown-menu">
 									<li><a href="http://hs.wl.k12.in.us/info/document-library/cat_view/68-announcements">Announcements</a></li>
 									<li><a href="http://hs.wl.k12.in.us/info/document-library/doc_download/32-jrsr-high-school-code-of-conduct">Handbook</a></li>
-									<li><a href="https://harmony.wl.k12.in.us/">Harmony</a></li>
-									<li><a href="http://wlcsc-destiny/common/welcome.jsp?site=102">Library Card Catalog</a></li>
+                                    <% if internal? %><li><a href="https://harmony.wl.k12.in.us/">Harmony</a></li><% end %>
+                                    <% if internal? %><li><a href="http://wlcsc-destiny/common/welcome.jsp?site=102">Library Card Catalog</a></li><% end %>
 								</ul>
 							</li>
 							<li class="dropdown">
@@ -109,9 +105,11 @@
 									<b class="caret"></b>
 								</a>
 								<ul class="dropdown-menu">
-									<li><a href="http://apps.wl.k12.in.us/firefight/">Firefight</a></li>
-									<li><a href="http://reddev/wlworkOrder/maint/workorders/WO_Add.asp?WorkOrderTypeID=2">Building Work Orders</a></li>
-									<li><a href="https://mail/exchange/">Web Mail</a></li>
+									<li><a href="https://apps.wl.k12.in.us/firefight/">Firefight</a></li>
+                                    <% if internal? %><li><a href="http://reddev/wlworkOrder/maint/workorders/WO_Add.asp?WorkOrderTypeID=2">Building Work Orders</a></li><% end %>
+									<li><a href="http://www.learn360.com/">Learn 360</a></li>
+									<li><a href="http://www.discoveryeducation.com/">Discovery Education</a></li>
+                                    <% if internal? %><li><a href="http://reddev/Intranet/mediawiki">Wiki</a></li><% end %>
 								</ul>
 							</li>
 						</ul>
@@ -122,12 +120,18 @@
 		
 		<div class="container-fluid">
 			<div class="row-fluid">
-				<div class="span9Sometimes span-fixed-sidebar">
+                <div class="span9Sometimes span-fixed-sidebar">
+                    <% if internal? %>
 					<section id="notes">
 						<div class="well">
 							<p class="text-error">Oh no, something went wrong!</p>
 						</div>
-					</section>
+                        </section>
+                    <% end %>
+                    <section id="web_apps">
+                    <h1>Web Applications</h1>
+                    <p id="apps-loading">Loading...</p>
+                    </section>
 					<section id="reference_material">
 						<div class="well">
 							<p class="text-error">Oh no, something went wrong!</p>
@@ -140,8 +144,9 @@
 							<div class="nav-scrollspy">
 								<ul class="nav nav-list">
 									<li class="nav-header">Sections</li>
-									<li><a href="#notes">Notes</a></li>
+                                    <% if internal? %><li><a href="#notes">Notes</a></li><% end %>
 									<li><a href="#reference_material">Reference Material</a></li>
+                                    <% if internal? %><li><a href="#web_apps">Web Applications</a></li><% end %>
 								</ul>
 							</div>
 							<div>
@@ -149,15 +154,17 @@
 									<li class="divider" />
 									<li class="nav-header">Links</li>
 									<li><a href="http://wl.k12.in.us">WLCSC Web Site</a></li>
-									<li><a href="http://apps.wl.k12.in.us/firefight/">Firefight</a></li>
-									<li><a href="http://reddev/wlworkOrder/maint/workorders/WO_Add.asp?WorkOrderTypeID=2">Building Work Orders</a></li>
+									<li><a href="http://apps.wl.k12.in.us/firefight/">Firefight - IT Dept. Work Orders</a></li>
+                                    <% if internal? %>
+                                    <li><a href="http://reddev/wlworkOrder/maint/workorders/WO_Add.asp?WorkOrderTypeID=2">Building & Maintenance Work Orders</a></li>
 									<li><a data-toggle="collapse" data-target="#harmonies">Harmony</a>
 										<ul id="harmonies" class="collapse nav nav-list">
 											<li><a href="https://harmony.wl.k12.in.us/ceelementary.nsf/weblogin">Cumberland</a></li>
 											<li><a href="https://harmony.wl.k12.in.us/HHelementary.nsf/weblogin">Happy Hollow</a></li>
 											<li><a href="https://harmony.wl.k12.in.us/">Jr/Sr High</a></li>
 										</ul>
-									</li>
+                                        </li>
+                                    <% end %>
                                     <li><a href="http://moodle.wl.k12.in.us/">Moodle</a></li>
                                 </ul>
                                 <ul id="outageBox" class="nav nav-list"></ul>
@@ -184,19 +191,5 @@
 		<script src="<%= url 'js/bootstrap.js' %>"></script>
 		<script src="<%= url 'js/overrides.js' %>"></script>
         <script src="<%= url 'csv.js' %>"></script>
-        <script>
-            var remoteData = null;
-            function testLoad() {
-                $.getJSON("http://apps.wl.k12.in.us/dashboard/services.json?outages=1&callback=?", function(json) {
-                    if(json.length > 0) {
-                        $('#outageBox').append('<li class="nav-header">IT Service Interruptions</li>');
-                        $.each(json, function(i, service) {
-                            $('#outageBox').append('<li><b><a href="' + service['address'] + '">' + service['name'] + '</a></b> - ' + service['message'] + '</li>');
-                        });
-                        $('#outageBox').append('</ul>');
-                    }
-                });
-            }
-        </script>
 	</body>
 </html>

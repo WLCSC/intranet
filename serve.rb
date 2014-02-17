@@ -9,6 +9,10 @@ helpers do
 	def base_url
 		@base_url ||= "#{request.env['rack.url_scheme']}://#{request.env['HTTP_HOST']}"
 	end
+
+    def internal?
+        request.ip.to_s.match(/10\.[12345]0\.\d+\.\d+/)
+    end
 end
 
 configure do
