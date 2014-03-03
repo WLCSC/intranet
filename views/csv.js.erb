@@ -229,7 +229,8 @@ function PopulateNotesSectionId (idToPopulatify)
             }
 
             function populateApps() {
-                $.getJSON("https://apps.wl.k12.in.us/dashboard/services.json?published=1&callback=?", function(json) {
+                var url = "<%= internal? ? "http://apps.wl.k12.in.us/dashboard/services.json?published=1&callback=?" :"http://apps.wl.k12.in.us/dashboard/services.json?published=1&external=1&callback=?"  %>";
+                $.getJSON(url, function(json) {
                     remoteDump = json;
                     $('#apps-loading').remove();
                     $('#web_apps').append('<table class="table table-condensed" id="app-table">');
@@ -243,7 +244,7 @@ function PopulateNotesSectionId (idToPopulatify)
                     });
                     $('#web_apps').append('</table>');
                 });
-                $.getJSON("https://apps.wl.k12.in.us/dashboard/services.json?outages=1&callback=?", function(json) {
+                $.getJSON("http://apps.wl.k12.in.us/dashboard/services.json?outages=1&callback=?", function(json) {
                     if(json.length > 0) {
                         $('#outageBox').append('<li class="divider"></li><li class="nav-header">IT Service Messages</li>');
                         $.each(json, function(i, service) {
@@ -259,6 +260,6 @@ $(document).ready (function () {
     PopulateAccordionId ("reference_material");
     <% if internal? %>
         PopulateNotesSectionId ("notes");
-populateApps();
 <% end %>
+populateApps();
 });

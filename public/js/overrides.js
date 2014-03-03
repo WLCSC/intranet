@@ -13,7 +13,7 @@ function resizeit() {
 	sidebarwidth = $(".sidebar-width").css ('width');
 
 	bodypaddingtop = $(".navbar-fixed-top").css ('height');
-	// sidebarheight = $("body").css('height');
+	//sidebarheight = $("body").css('height');
 	$('.sidebar-nav-fixed').css ('width', sidebarwidth);
 	$('.sidebar-nav-fixed').css ('height', sidebarheight);
 	$('body').css ('paddingTop', bodypaddingtop)

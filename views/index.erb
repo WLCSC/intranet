@@ -4,7 +4,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta charset="utf-8">
-		<title>WLCSC Intranet - Student and Staff Resources</title>
+        <title>WLCSC Student & Staff <%= internal? ? "Intranet" : "Extra-Intranet" %> Resources</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
         <meta name="author" content="">
@@ -38,7 +38,7 @@
 						<span class="icon-bar"></span>
 					</button>
 					<a class="brand" href="#">
-						<img src="<%= url 'img/icon.png' %>" /> Intranet
+                        <img src="<%= url 'img/icon.png' %>" /> <%= internal? ? "Intranet" : "Extra-Intranet" %> Resources
 					</a>
 					<div class="nav-collapse collapse">
 						<ul class="nav">
@@ -145,8 +145,8 @@
 								<ul class="nav nav-list">
 									<li class="nav-header">Sections</li>
                                     <% if internal? %><li><a href="#notes">Notes</a></li><% end %>
-									<li><a href="#reference_material">Reference Material</a></li>
                                     <% if internal? %><li><a href="#web_apps">Web Applications</a></li><% end %>
+									<li><a href="#reference_material">Reference Material</a></li>
 								</ul>
 							</div>
 							<div>
